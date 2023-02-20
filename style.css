@@ -5,7 +5,7 @@ h1{display:inline;font-family:"Montserrat", sans-serif;margin:0px;padding:0px !i
 .top{max-width:99vw;padding:10px;transform:translateX(1px);}
 #hc{display:inline;margin-top:50px;height:39px;}
 #area{outline:0px;border-radius:5px;padding:5px;width:calc(100vw - 44px) !important;resize:none;height:calc(100vh - 103px) !important;margin-left:10px;margin-right:10px;}
-.swal2-html-container,.swal2-title{font-family:"Montserrat",sans-serif}
+.swal2-html-container *,.swal2-html-container,.swal2-styled,.swal2-title{font-family:"Montserrat",sans-serif}
 
 
 button.st{
