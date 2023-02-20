@@ -8,9 +8,9 @@ function keepState(elem)
       elem.value = storedValue;
 
   elem.addEventListener('input', function (){
-      cLog('Attempting to save to local storage',darkorange);
+      cLog('Attempting to save to local storage','darkorange');
       localStorage.setItem(key, elem.value);
-      cLog('Saved to local storage',darkgreen);
+      cLog('Saved to local storage','darkgreen');
   });
 }
 
@@ -25,7 +25,7 @@ Array.from(saves).forEach((element, index) => {
 });
 
 function wordCount() {
- cLog('Starting word count...',darkviolet);
+ cLog('Starting word count...','darkviolet');
  var text = document.getElementById("area").value;
  var wcount = 0;
  var split = text.split(' ');
@@ -39,5 +39,5 @@ function wordCount() {
   'Your text has ' + wcount + ' words.',
   'info'
 )
-cLog('Counted ' + wcount + 'words',darkgreen);
+cLog('Counted ' + wcount + 'words','darkgreen');
 }
