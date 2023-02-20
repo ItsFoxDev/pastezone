@@ -2,9 +2,10 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Pastezone V3</title>
+  <title>Pastezone V3</title>
   <link rel="stylesheet" href="./style.css">
-
+  <link href="light.ico" rel="icon" media="(prefers-color-scheme: light)" />
+  <link href="dark.ico" rel="icon" media="(prefers-color-scheme: dark)" />
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -13,7 +14,7 @@
 <div class="top">
   <div id="hc"><h1><i class="fas fa-clipboard"></i> Pastezone v3</h1></div>
   <div id="buttons">
-    <button class="st" onclick="document.getElementById('area').value='';Swal.fire('Success!','Pastezone has been cleared.','success')"><i class="fas fa-trash"></i>
+    <button class="st" onclick="Swal.fire({title: 'Clear PasteZone?',text: 'You won't be able to undo this!',icon: 'warning',showCancelButton: true,confirmButtonColor: '#2eb00b',cancelButtonColor: '#d33',confirmButtonText: 'Clear'}).then((result) => {if(result.isConfirmed{document.getElementById('area').value='';Swal.fire('Deleted!','Your file has been deleted.','success')}})"><i class="fas fa-trash"></i>
     <button class="st" onclick="wordCount();"><i class="fas fa-tally"></i>
     <button class="st" onclick="document.querySelector('textarea').select();document.execCommand('copy');window.getSelection().removeAllRanges();Swal.fire('Success!','Pastezone has been copied to clipboard.','success')"><i class="fas fa-copy"></i>
   </div>
