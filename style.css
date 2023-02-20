@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html,body{margin:0px;width:99vw;height:100vh;overflow: hidden !important;}
+h1{display:inline;font-family:"Montserrat", sans-serif;margin:0px;padding:0px !important; width:calc(100vw - 60px) !important;}
+*{transition:all .3s;}
+.top{max-width:99vw;padding:10px;transform:translateX(1px);}
+#hc{display:inline;margin-top:50px;height:39px;}
+#area{outline:0px;border-radius:5px;padding:5px;width:calc(100vw - 44px) !important;resize:none;height:calc(100vh - 103px) !important;margin-left:10px;margin-right:10px;}
+.swal2-html-container,.swal2-title{font-family:"Montserrat",sans-serif}
+
+
+button.st{
+  padding:5px;width:45px;height:45px;border-radius:5px;
+  font-size:17.5px;
+  cursor:pointer;
+}
+#buttons{display:flex;float:right;gap:5px;}
+@media (prefers-color-scheme: dark) {
+  h1,#area{color:white;}
+  body{background:rgb(10,10,10);}
+  .st,#area{background:rgba(255,255,255,0.1);box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;}
+  .st,#area{border:1px solid rgba(255,255,255,0.2)}
+  button.st{color:white;}
+  button.st:hover{background:rgba(255,255,255,0.2);}
+}
+@media (prefers-color-scheme: light) {
+  .st,textarea{border:1px solid rgba(10,10,10,0.1);box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+  button.st{background:rgba(255,255,255,0.1)}
+  button.st:hover{background:rgba(100,100,100,0.1);}
+}
