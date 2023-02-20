@@ -8,11 +8,15 @@ function keepState(elem)
       elem.value = storedValue;
 
   elem.addEventListener('input', function (){
+      fox.log('Attempting to save to local storage',darkorange);
       localStorage.setItem(key, elem.value);
+      fox.log('Saved to local storage',darkgreen);
   });
 }
 
-
+function fox.log(m,c){
+  console.log("%cFoxJS","color: white; background: " + c + "; padding: 2px 6px; border-radius: 3px; margin-right: 5px;",m);
+}
 
 
 const saves = document.querySelectorAll('.save');
