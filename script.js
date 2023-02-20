@@ -32,6 +32,6 @@ function wordCount() {
  Swal.fire(
   'Word count',
   'Your text has ' + wcount + ' words.',
-  'success'
+  'info'
 )
 }
