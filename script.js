@@ -63,3 +63,9 @@ function copyZText(){
   /* De-selects text */ window.getSelection().removeAllRanges();
   Swal.fire('Success!','Pastezone has been copied to clipboard.','success')
 }
+
+function speakZone(){
+  let utterance = new SpeechSynthesisUtterance(document.querySelector('textarea').value);
+  speechSynthesis.speak(utterance);
+  Swal.fire('Success!','Reading your PasteZone.','success')
+}
