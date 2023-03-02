@@ -65,7 +65,7 @@ function copyZText(){
 }
 
 function speakZone(){
-  let utterance = new SpeechSynthesisUtterance(document.querySelector('textarea').value);
+  let utterance = new SpeechSynthesisUtterance(document.querySelector('textarea').value;
   speechSynthesis.speak(utterance);
   Swal.fire('Success!','Reading your PasteZone.','success')
 }
