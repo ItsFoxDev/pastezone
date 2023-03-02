@@ -33,7 +33,7 @@ function wordCount() {
   'Word count',
   'Your text has ' + wcount + ' words.',
   'info'
-)
+);
 cLog('Counted ' + wcount + 'words','darkgreen');
 }
 function clearZone(){
@@ -52,20 +52,20 @@ Swal.fire({
       'Success!',
       'Your PasteZone has been cleared.',
       'success'
-    )
+    );
   }
-})
-};
+});
+}
 
 function copyZText(){
   /* Selects text */ document.querySelector('textarea').select();
   /* Copies text */ document.execCommand('copy');
   /* De-selects text */ window.getSelection().removeAllRanges();
-  Swal.fire('Success!','Pastezone has been copied to clipboard.','success')
+  Swal.fire('Success!','Pastezone has been copied to clipboard.','success');
 }
 
 function speakZone(){
-  let utterance = new SpeechSynthesisUtterance(document.querySelector('textarea').value;
+  let utterance = new SpeechSynthesisUtterance(document.querySelector('textarea').value);
   speechSynthesis.speak(utterance);
-  Swal.fire('Success!','Reading your PasteZone.','success')
+  Swal.fire('Success!','Reading your PasteZone.','success');
 }
