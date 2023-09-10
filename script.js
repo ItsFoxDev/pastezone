@@ -3,16 +3,15 @@ var zone = document.getElementById('zone');
 var key = 'pastezone';
 var storedValue = localStorage.getItem(key);
 function savezone(){
-  cLog('Attempting to save to local storage','darkorange');
   localStorage.setItem(key, zone.value);
-  cLog('Saved to local storage','darkgreen');
+  cLog('Synced Pastezone with local storage','darkgreen');
 }
 if (storedValue){
   zone.value = storedValue;
-  zone.addEventListener('input', function (){
-    savezone();
-  });
 }
+zone.addEventListener('input', function (){
+  savezone();
+});
 
 function cLog(m,c){
   console.log("%cFoxJS","color: white; background: " + c + "; padding: 2px 6px; border-radius: 3px; margin-right: 5px;",m);
@@ -68,4 +67,14 @@ function speakZone(){
   let utterance = new SpeechSynthesisUtterance(zone.value);
   speechSynthesis.speak(utterance);
   Swal.fire('Success!','Reading your PasteZone.','success');
+}
+
+function exportTXT(){
+  const link = document.createElement("a");
+  const file = new Blob([zone.value], { type: 'text/plain' });
+  link.href = URL.createObjectURL(file);
+  link.download = "pastezone.txt";
+  link.click();
+  URL.revokeObjectURL(link.href);
+  Swal.fire('Downloaded!','Your pastezone has been downloaded','success');
 }

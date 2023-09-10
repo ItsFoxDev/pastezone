@@ -12,16 +12,21 @@
   <script defer src="./script.js"></script>
 </head>
 <body>
+  <app>
     <div id="top">
-    <h1>
-      <i class="fas fa-clipboard"></i>
-      PasteZone
-    </h1>
-    <div id="btns">
-      <button onclick="copyZText();"><i class="fas fa-clone"></i></button>
-      <button onclick="wordCount();"><i class="fas fa-tally"></i></button>
+      <h1>
+        <i class="fas fa-clipboard"></i>
+        PasteZone
+      </h1>
+      <div id="btns">
+        <button onclick="speakZone();"><i class="fas fa-volume"></i></button>
+        <button onclick="copyZText();"><i class="fas fa-clone"></i></button>
+        <button onclick="wordCount();"><i class="fas fa-tally"></i></button>
+        <button onclick="clearZone();"><i class="fas fa-trash"></i></button>
+        <button onclick="exportTXT();"><i class="fas fa-arrow-down-to-line"></i></button>
+      </div>
     </div>
-  </div>
-  <textarea class="save" id="zone"></textarea>
+    <textarea class="save" id="zone"></textarea>
+  </app>
 </body>
 </html>
